@@ -1,6 +1,6 @@
 FROM python:3.6
 
-LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
+LABEL maintainer="Sebastian Ramirez <ayharano@gmail.com>"
 
 RUN pip install uvicorn gunicorn
 

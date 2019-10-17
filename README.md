@@ -1,23 +1,23 @@
-[![Build Status](https://travis-ci.org/tiangolo/uvicorn-gunicorn-docker.svg?branch=master)](https://travis-ci.org/tiangolo/uvicorn-gunicorn-docker)
+[![Build Status](https://travis-ci.org/ayharano/uvicorn-gunicorn-docker.svg?branch=master)](https://travis-ci.org/ayharano/uvicorn-gunicorn-docker)
 
 ## Supported tags and respective `Dockerfile` links
 
-* [`python3.8` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-docker/blob/master/python3.8/Dockerfile)
-* [`python3.7`, `latest` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-docker/blob/master/python3.7/Dockerfile)
-* [`python3.6` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-docker/blob/master/python3.6/Dockerfile)
-* [`python3.6-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-docker/blob/master/python3.6-alpine3.8/Dockerfile)
-* [`python3.7-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-docker/blob/master/python3.7-alpine3.8/Dockerfile)
-* [`python3.8-alpine3.10` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-docker/blob/master/python3.8-alpine3.10/Dockerfile)
+* [`python3.8` _(Dockerfile)_](https://github.com/ayharano/uvicorn-gunicorn-docker/blob/master/python3.8/Dockerfile)
+* [`python3.7`, `latest` _(Dockerfile)_](https://github.com/ayharano/uvicorn-gunicorn-docker/blob/master/python3.7/Dockerfile)
+* [`python3.6` _(Dockerfile)_](https://github.com/ayharano/uvicorn-gunicorn-docker/blob/master/python3.6/Dockerfile)
+* [`python3.6-alpine3.8` _(Dockerfile)_](https://github.com/ayharano/uvicorn-gunicorn-docker/blob/master/python3.6-alpine3.8/Dockerfile)
+* [`python3.7-alpine3.8` _(Dockerfile)_](https://github.com/ayharano/uvicorn-gunicorn-docker/blob/master/python3.7-alpine3.8/Dockerfile)
+* [`python3.8-alpine3.10` _(Dockerfile)_](https://github.com/ayharano/uvicorn-gunicorn-docker/blob/master/python3.8-alpine3.10/Dockerfile)
 
-**Note**: Note: There are [tags for each build date](https://hub.docker.com/r/tiangolo/uvicorn-gunicorn/tags). If you need to "pin" the Docker image version you use, you can select one of those tags. E.g. `tiangolo/uvicorn-gunicorn:python3.7-2019-10-15`.
+**Note**: Note: There are [tags for each build date](https://hub.docker.com/r/ayharano/uvicorn-gunicorn/tags). If you need to "pin" the Docker image version you use, you can select one of those tags. E.g. `ayharano/uvicorn-gunicorn:python3.7-2019-10-15`.
 
 # uvicorn-gunicorn
 
 [**Docker**](https://www.docker.com/) image with [**Uvicorn**](https://www.uvicorn.org/) managed by [**Gunicorn**](https://gunicorn.org/) for high-performance web applications in **[Python](https://www.python.org/) 3.8**, **3.7** and **3.6** with performance auto-tuning. Optionally with Alpine Linux.
 
-**GitHub repo**: [https://github.com/tiangolo/uvicorn-gunicorn-docker](https://github.com/tiangolo/uvicorn-gunicorn-docker)
+**GitHub repo**: [https://github.com/ayharano/uvicorn-gunicorn-docker](https://github.com/ayharano/uvicorn-gunicorn-docker)
 
-**Docker Hub image**: [https://hub.docker.com/r/tiangolo/uvicorn-gunicorn/](https://hub.docker.com/r/tiangolo/uvicorn-gunicorn/)
+**Docker Hub image**: [https://hub.docker.com/r/ayharano/uvicorn-gunicorn/](https://hub.docker.com/r/ayharano/uvicorn-gunicorn/)
 
 ## Description
 
@@ -41,7 +41,7 @@ You can use **Gunicorn** to manage Uvicorn and run multiple of these concurrent 
 
 That way, you get the best of concurrency and parallelism.
 
-### `tiangolo/uvicorn-gunicorn`
+### `ayharano/uvicorn-gunicorn`
 
 This image will set a sensible configuration based on the server it is running on (the amount of CPU cores available) without making sacrifices.
 
@@ -53,25 +53,25 @@ There is also an Alpine version. If you want it, use one of the Alpine tags from
 
 This image was created to be the base image for:
 
-* [**tiangolo/uvicorn-gunicorn-starlette**](https://github.com/tiangolo/uvicorn-gunicorn-starlette-docker)
-* [**tiangolo/uvicorn-gunicorn-fastapi**](https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker)
+* [**ayharano/uvicorn-gunicorn-starlette**](https://github.com/ayharano/uvicorn-gunicorn-starlette-docker)
+* [**ayharano/uvicorn-gunicorn-fastapi**](https://github.com/ayharano/uvicorn-gunicorn-fastapi-docker)
 
 But could be used as the base image to run any Python web application that uses the ASGI specification.
 
-If you are creating a new [**Starlette**](https://www.starlette.io/) web application you should use [**tiangolo/uvicorn-gunicorn-starlette**](https://github.com/tiangolo/uvicorn-gunicorn-starlette-docker) instead.
+If you are creating a new [**Starlette**](https://www.starlette.io/) web application you should use [**ayharano/uvicorn-gunicorn-starlette**](https://github.com/ayharano/uvicorn-gunicorn-starlette-docker) instead.
 
-If you are creating a new [**FastAPI**](https://fastapi.tiangolo.com/) web application you should use [**tiangolo/uvicorn-gunicorn-fastapi**](https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker) instead.
+If you are creating a new [**FastAPI**](https://fastapi.ayharano.com/) web application you should use [**ayharano/uvicorn-gunicorn-fastapi**](https://github.com/ayharano/uvicorn-gunicorn-fastapi-docker) instead.
 
 **Note**: FastAPI is based on Starlette and adds several features on top of it. Useful for APIs and other cases: data validation, data conversion, documentation with OpenAPI, dependency injection, security/authentication and others.
 
-**Note**: Unless you are doing something more technically advanced, you probably should be using [**Starlette**](https://www.starlette.io/) with [**tiangolo/uvicorn-gunicorn-starlette**](https://github.com/tiangolo/uvicorn-gunicorn-starlette-docker) or [**FastAPI**](https://fastapi.tiangolo.com/) with [**tiangolo/uvicorn-gunicorn-fastapi**](https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker).
+**Note**: Unless you are doing something more technically advanced, you probably should be using [**Starlette**](https://www.starlette.io/) with [**ayharano/uvicorn-gunicorn-starlette**](https://github.com/ayharano/uvicorn-gunicorn-starlette-docker) or [**FastAPI**](https://fastapi.ayharano.com/) with [**ayharano/uvicorn-gunicorn-fastapi**](https://github.com/ayharano/uvicorn-gunicorn-fastapi-docker).
 
 ## How to use
 
 * You don't need to clone the GitHub repo. You can use this image as a base image for other images, using this in your `Dockerfile`:
 
 ```Dockerfile
-FROM tiangolo/uvicorn-gunicorn:python3.7
+FROM ayharano/uvicorn-gunicorn:python3.7
 
 COPY ./app /app
 ```
@@ -387,26 +387,26 @@ All the image tags, configurations, environment variables and application option
 
 ### 0.5.0
 
-* Refactor tests to use env vars and add image tags for each build date, like `tiangolo/uvicorn-gunicorn:python3.7-2019-10-15`. PR [#15](https://github.com/tiangolo/uvicorn-gunicorn-docker/pull/15).
-* Update Gunicorn worker heartbeat directory to `/dev/shm` to improve performance. PR [#9](https://github.com/tiangolo/uvicorn-gunicorn-docker/pull/9) by [@wshayes](https://github.com/wshayes).
-* Upgrade Travis. PR [#7](https://github.com/tiangolo/uvicorn-gunicorn-docker/pull/7).
+* Refactor tests to use env vars and add image tags for each build date, like `ayharano/uvicorn-gunicorn:python3.7-2019-10-15`. PR [#15](https://github.com/ayharano/uvicorn-gunicorn-docker/pull/15).
+* Update Gunicorn worker heartbeat directory to `/dev/shm` to improve performance. PR [#9](https://github.com/ayharano/uvicorn-gunicorn-docker/pull/9) by [@wshayes](https://github.com/wshayes).
+* Upgrade Travis. PR [#7](https://github.com/ayharano/uvicorn-gunicorn-docker/pull/7).
 
 ### 0.4.0
 
-* Add support for live auto-reload with an additional custom script `/start-reload.sh`, check the [updated documentation](https://github.com/tiangolo/uvicorn-gunicorn-docker#development-live-reload). PR <a href="https://github.com/tiangolo/uvicorn-gunicorn-docker/pull/6" target="_blank">#6</a>.
+* Add support for live auto-reload with an additional custom script `/start-reload.sh`, check the [updated documentation](https://github.com/ayharano/uvicorn-gunicorn-docker#development-live-reload). PR <a href="https://github.com/ayharano/uvicorn-gunicorn-docker/pull/6" target="_blank">#6</a>.
 
 ### 0.3.0
 
 * Set `WORKERS_PER_CORE` by default to `1`, as it shows to have the best performance on benchmarks.
-* Make the default web concurrency, when `WEB_CONCURRENCY` is not set, to a minimum of 2 workers. This is to avoid bad performance and blocking applications (server application) on small machines (server machine/cloud/etc). This can be overridden using `WEB_CONCURRENCY`. This applies for example in the case where `WORKERS_PER_CORE` is set to `1` (the default) and the server has only 1 CPU core. PR <a href="https://github.com/tiangolo/uvicorn-gunicorn-docker/pull/5" target="_blank">#5</a>.
+* Make the default web concurrency, when `WEB_CONCURRENCY` is not set, to a minimum of 2 workers. This is to avoid bad performance and blocking applications (server application) on small machines (server machine/cloud/etc). This can be overridden using `WEB_CONCURRENCY`. This applies for example in the case where `WORKERS_PER_CORE` is set to `1` (the default) and the server has only 1 CPU core. PR <a href="https://github.com/ayharano/uvicorn-gunicorn-docker/pull/5" target="_blank">#5</a>.
 
 ### 0.2.0
 
-* Make `/start.sh` run independently, reading and generating used default environment variables. And remove `/entrypoint.sh` as it doesn't modify anything in the system, only reads environment variables. PR <a href="https://github.com/tiangolo/uvicorn-gunicorn-docker/pull/4" target="_blank">#4</a>.
+* Make `/start.sh` run independently, reading and generating used default environment variables. And remove `/entrypoint.sh` as it doesn't modify anything in the system, only reads environment variables. PR <a href="https://github.com/ayharano/uvicorn-gunicorn-docker/pull/4" target="_blank">#4</a>.
 
 ### 0.1.2
 
-* Whenever this image is built (and each of its tags/versions), trigger a build for the children images (<a href="https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker" target="_blank">FastAPI</a> and <a href="https://github.com/tiangolo/uvicorn-gunicorn-starlette-docker" target="_blank">Starlette</a>).
+* Whenever this image is built (and each of its tags/versions), trigger a build for the children images (<a href="https://github.com/ayharano/uvicorn-gunicorn-fastapi-docker" target="_blank">FastAPI</a> and <a href="https://github.com/ayharano/uvicorn-gunicorn-starlette-docker" target="_blank">Starlette</a>).
 
 ### 0.1.0
 
